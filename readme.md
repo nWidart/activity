@@ -1,6 +1,6 @@
 # Activity
 
-Activity lets you list your current activity on Github.
+Activity lets you list your current activity on Github. Soon from Bitbucket as well.
 
 ## Installation
 
