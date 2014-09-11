@@ -1,6 +1,8 @@
 {
     "name": "nwidart/activity",
-    "description": "",
+    "description": "Activity lets you list your current activity on Github. Soon from Bitbucket as well.",
+    "keywords": ["github", "activity", "laravel", "bitbucket"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Nicolas Widart",
