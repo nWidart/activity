@@ -2,6 +2,30 @@
 
 Activity lets you list your current activity on Github. Soon from Bitbucket as well.
 
+**Important note**
+
+Keep in mind this package is still in W.I.P., meaning not all event types are implemented yet.
+
+The event types not implemented yet:
+
+- CommitCommentEvent
+- ForkEvent
+- PublicEvent
+- ReleaseEvent
+
+
+Events available:
+
+- CreateEvent
+- DeleteEvent
+- IssueCommentEvent
+- PullRequestEvent
+- PushEvent
+- WatchEvent
+
+
+
+
 ## Installation
 
 Add the following in you [composer](http://getcomposer.org).json file:
