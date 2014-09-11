@@ -1,6 +1,8 @@
 <?php namespace Nwidart\Activity;
 
+use Github\Client;
 use Illuminate\Support\ServiceProvider;
+use Nwidart\Activity\Github\GithubEventFactory;
 
 class ActivityServiceProvider extends ServiceProvider
 {
@@ -24,6 +26,13 @@ class ActivityServiceProvider extends ServiceProvider
             'Nwidart\Activity\EventFactoryInterface',
             'Nwidart\Activity\Github\GithubEventFactory'
         );
+
+        $this->app['activity'] = $this->app->share(function($app) {
+            $client = new Client;
+            $factory = new GithubEventFactory;
+
+            return new Activity($factory, $client);
+        });
     }
 
     /**
@@ -33,7 +42,7 @@ class ActivityServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return array();
+        return array('activity');
     }
 
 }
