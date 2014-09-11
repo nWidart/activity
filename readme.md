@@ -26,7 +26,8 @@ Add the service provider in `app/config/app.php`
 ## Usage
 
 The usage is very simple and straightforward.
-Since this is still a W.I.P. there's no Facade yet. You can inject via the constructor though.
+
+### Constructor/method injection
 
 ```php
 public function __construct(Activity $activity)
@@ -38,6 +39,14 @@ public function getIndex()
 {
     $activities = $this->activity->forUser('nwidart')->activities();
 }
+```
+
+The `activities` method accepts integer that represents the limit of activities. It defaults to 5.
+
+### Using the Facade
+
+```php
+$activities = ActivityFacade::forUser('nwidart')->activities();
 ```
 
 The response will be:
