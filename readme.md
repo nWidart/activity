@@ -6,7 +6,7 @@ Activity lets you list your current activity on Github. Soon from Bitbucket as w
 
 Keep in mind this package is still in W.I.P., meaning not all event types are implemented yet.
 
-The event types not implemented yet:
+The event types **not implemented** yet:
 
 - CommitCommentEvent
 - ForkEvent
@@ -14,7 +14,7 @@ The event types not implemented yet:
 - ReleaseEvent
 
 
-Events available:
+Events **available**:
 
 - CreateEvent
 - DeleteEvent
