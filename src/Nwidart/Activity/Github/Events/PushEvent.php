@@ -1,8 +1,9 @@
 <?php namespace Nwidart\Activity\Github\Events;
 
 use Github\Client;
+use Nwidart\Activity\EventInterface;
 
-class PushEvent extends BaseEventClass implements GithubEventInterface
+class PushEvent extends BaseEventClass implements EventInterface
 {
     public function handle($eventData)
     {

@@ -1,9 +1,10 @@
 <?php namespace Nwidart\Activity\Github\Events;
 
-class CommitCommentEvent implements GithubEventInterface
+use Nwidart\Activity\EventInterface;
+
+class CommitCommentEvent implements EventInterface
 {
     public function handle($eventData)
     {
-        // TODO: Implement handle() method.
     }
 }

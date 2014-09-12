@@ -1,6 +1,8 @@
 <?php namespace Nwidart\Activity\Github\Events;
 
-class WatchEvent extends BaseEventClass implements GithubEventInterface
+use Nwidart\Activity\EventInterface;
+
+class WatchEvent extends BaseEventClass implements EventInterface
 {
     public function handle($eventData)
     {

@@ -1,6 +1,8 @@
 <?php namespace Nwidart\Activity\Github\Events;
 
-class DeleteEvent extends BaseEventClass implements GithubEventInterface
+use Nwidart\Activity\EventInterface;
+
+class DeleteEvent extends BaseEventClass implements EventInterface
 {
     public function handle($eventData)
     {

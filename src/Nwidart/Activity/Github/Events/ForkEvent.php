@@ -1,9 +1,10 @@
 <?php namespace Nwidart\Activity\Github\Events;
 
-class ForkEvent implements GithubEventInterface
+use Nwidart\Activity\EventInterface;
+
+class ForkEvent implements EventInterface
 {
     public function handle($eventData)
     {
-        // TODO: Implement handle() method.
     }
 }

@@ -1,6 +1,8 @@
 <?php namespace Nwidart\Activity\Github\Events;
 
-class IssueCommentEvent extends BaseEventClass implements GithubEventInterface
+use Nwidart\Activity\EventInterface;
+
+class IssueCommentEvent extends BaseEventClass implements EventInterface
 {
     public function handle($eventData)
     {
