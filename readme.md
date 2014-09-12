@@ -1,4 +1,8 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nWidart/activity/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nWidart/activity/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/nwidart/activity/v/stable.svg)](https://packagist.org/packages/nwidart/activity) [![Total Downloads](https://poser.pugx.org/nwidart/activity/downloads.svg)](https://packagist.org/packages/nwidart/activity) [![Latest Unstable Version](https://poser.pugx.org/nwidart/activity/v/unstable.svg)](https://packagist.org/packages/nwidart/activity) [![License](https://poser.pugx.org/nwidart/activity/license.svg)](https://packagist.org/packages/nwidart/activity)
+
 # Activity
+
 
 Activity lets you list your current activity on Github. Soon from Bitbucket as well.
 
