@@ -27,7 +27,7 @@ class ActivityServiceProvider extends ServiceProvider
             'Nwidart\Activity\Github\GithubEventFactory'
         );
 
-        $this->app['activity'] = $this->app->share(function($app) {
+        $this->app['activity'] = $this->app->share(function() {
             $client = new Client;
             $factory = new GithubEventFactory;
 
