@@ -52,6 +52,22 @@ Add the service provider in `app/config/app.php`
     'Nwidart\Activity\ActivityServiceProvider'
 ]
 ```
+Next add the Facade:
+
+```php
+'aliases' => [
+	...
+    'Activity'          => 'Nwidart\Activity\ActivityFacade',
+]
+```
+
+Finally publish the configuration file:
+
+```
+php artisan config:publish Nwidart/activity
+```
+And add your Github Application token.
+
 
 ## Usage
 
