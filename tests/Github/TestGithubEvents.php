@@ -5,7 +5,8 @@ class TestGithubEvents extends GithubBaseTest
     /** @test */
     public function shouldReturnAnArray()
     {
-        $activities = $this->activity->forUser('nwidart')->activities();
+        $activities = $this->getActivities();
+        dd($activities);
 
         $this->assertInternalType('array', $activities);
     }
@@ -13,7 +14,7 @@ class TestGithubEvents extends GithubBaseTest
     /** @test */
     public function shouldReturnOneElement()
     {
-        $activities = $this->activity->forUser('nwidart')->activities(1);
+        $activities = $this->getActivities();
 
         $this->assertEquals(1, count($activities));
     }
@@ -21,7 +22,7 @@ class TestGithubEvents extends GithubBaseTest
     /** @test */
     public function shouldReturnArrayFiveElements()
     {
-        $activities = $this->activity->forUser('nwidart')->activities();
+        $activities = $this->getActivities();
 
         $this->assertEquals(5, count($activities));
     }
