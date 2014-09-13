@@ -1,8 +1,8 @@
 <?php namespace Nwidart\Activity;
 
 use Github\Client;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
-use Nwidart\Activity\Github\GithubEventFactory;
 
 class ActivityServiceProvider extends ServiceProvider
 {
@@ -22,14 +22,12 @@ class ActivityServiceProvider extends ServiceProvider
     {
         $this->package('nwidart/activity');
 
-        $this->app->bind(
-            'Nwidart\Activity\EventFactoryInterface',
-            'Nwidart\Activity\Github\GithubEventFactory'
-        );
+        $this->app['activity'] = $this->app->share(function($app) {
+            $driver = $app['config']->get('activity::driver');
+            $factoryClassName = "Nwidart\\Activity\\{$driver}\\{$driver}EventFactory";
 
-        $this->app['activity'] = $this->app->share(function() {
             $client = new Client;
-            $factory = new GithubEventFactory;
+            $factory = new $factoryClassName;
 
             return new Activity($factory, $client);
         });
