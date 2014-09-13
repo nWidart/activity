@@ -22,12 +22,18 @@ class ActivityServiceProvider extends ServiceProvider
     {
         $this->package('nwidart/activity');
 
+        $this->app->bind(
+            'Nwidart\Activity\EventFactoryInterface',
+            'Nwidart\Activity\Github\GithubEventFactory'
+        );
+
         $this->app['activity'] = $this->app->share(function($app) {
             $driver = $app['config']->get('activity::driver');
             $factoryClassName = "Nwidart\\Activity\\{$driver}\\{$driver}EventFactory";
+            $factory = new $factoryClassName;
 
             $client = new Client;
-            $factory = new $factoryClassName;
+            $client->authenticate($app['config']->get('activity::github.token'), 'http_token');
 
             return new Activity($factory, $client);
         });
