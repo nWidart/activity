@@ -2,7 +2,6 @@
 
 use Github\Client;
 use Github\HttpClient\Message\ResponseMediator;
-use Illuminate\Config\Repository;
 use Illuminate\Support\Facades\Config;
 
 class Activity
@@ -17,17 +16,12 @@ class Activity
      * @var Client
      */
     private $client;
-    /**
-     * @var Repository
-     */
-    private $config;
 
-    public function __construct(EventFactoryInterface $eventFactory, Client $client, Repository $config)
+    public function __construct(EventFactoryInterface $eventFactory, Client $client)
     {
         $this->eventFactory = $eventFactory;
         $this->client = $client;
-        $this->config = $config;
-        $this->client->authenticate($this->config->get('activity::github.token'), 'http_token');
+        $this->client->authenticate(Config::get('activity::github.token'), 'http_token');
     }
 
     public function forUser($user)
