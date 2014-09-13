@@ -27,6 +27,7 @@ Events **available**:
 - PullRequestEvent
 - PushEvent
 - WatchEvent
+- IssuesEvent
 
 
 
