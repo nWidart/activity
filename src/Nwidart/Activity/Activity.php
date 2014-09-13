@@ -2,6 +2,7 @@
 
 use Github\Client;
 use Github\HttpClient\Message\ResponseMediator;
+use Illuminate\Support\Facades\Config;
 
 class Activity
 {
@@ -20,6 +21,7 @@ class Activity
     {
         $this->eventFactory = $eventFactory;
         $this->client = $client;
+        $this->client->authenticate(Config::get('activity::github.token'), 'http_token');
     }
 
     public function forUser($user)
