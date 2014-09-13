@@ -7,5 +7,9 @@ return [
     | In the future Bitbucket will be available too.
     |--------------------------------------------------------------------------
     */
-    'driver' => 'Github'
+    'driver' => 'Github',
+
+    'github' => [
+        'token' => 'yourClientToken'
+    ]
 ];
