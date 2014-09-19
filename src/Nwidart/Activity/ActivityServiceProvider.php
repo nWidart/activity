@@ -3,7 +3,6 @@
 use Github\Client;
 use Github\HttpClient\Cache\FilesystemCache;
 use Github\HttpClient\CachedHttpClient;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
 class ActivityServiceProvider extends ServiceProvider
