@@ -13,7 +13,6 @@ Keep in mind this package is still in W.I.P., meaning not all event types are im
 
 The event types **not implemented** yet:
 
-- CommitCommentEvent
 - ForkEvent
 - PublicEvent
 - ReleaseEvent
@@ -28,7 +27,7 @@ Events **available**:
 - PushEvent
 - WatchEvent
 - IssuesEvent
-
+- CommitCommentEvent
 
 
 
