@@ -28,6 +28,7 @@ Events **available**:
 - WatchEvent
 - IssuesEvent
 - CommitCommentEvent
+- GollumEvent
 
 
 
