@@ -29,7 +29,7 @@ Events **available**:
 - IssuesEvent
 - CommitCommentEvent
 - GollumEvent
-
+- PullRequestReviewCommentEvent
 
 
 ## Installation
